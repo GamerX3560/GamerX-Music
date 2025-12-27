@@ -1,0 +1,268 @@
+Calculating task graph as no cached configuration is available for tasks: :composeApp:compileReleaseKotlinAndroid
+Type-safe project accessors is an incubating feature.
+> Task :crashlytics-empty:preBuild UP-TO-DATE
+> Task :common:androidPreBuild UP-TO-DATE
+> Task :aiService:androidPreBuild UP-TO-DATE
+> Task :composeApp:preBuild UP-TO-DATE
+> Task :crashlytics-empty:preReleaseBuild UP-TO-DATE
+> Task :data:androidPreBuild UP-TO-DATE
+> Task :kizzy:androidPreBuild UP-TO-DATE
+> Task :common:preAndroidMainBuild UP-TO-DATE
+> Task :composeApp:preReleaseBuild UP-TO-DATE
+> Task :composeApp:kmpPartiallyResolvedDependenciesChecker
+> Task :data:preAndroidMainBuild UP-TO-DATE
+> Task :domain:androidPreBuild UP-TO-DATE
+> Task :composeApp:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :kizzy:preAndroidMainBuild UP-TO-DATE
+> Task :common:kmpPartiallyResolvedDependenciesChecker
+> Task :crashlytics-empty:generateReleaseResValues UP-TO-DATE
+> Task :aiService:preAndroidMainBuild UP-TO-DATE
+> Task :common:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :composeApp:generateReleaseResValues UP-TO-DATE
+> Task :data:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :kotlinYtmusicScraper:androidPreBuild UP-TO-DATE
+> Task :crashlytics-empty:generateReleaseResources UP-TO-DATE
+> Task :aiService:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :ktorExt:androidPreBuild UP-TO-DATE
+> Task :common:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :lyricsService:androidPreBuild UP-TO-DATE
+> Task :media3:preBuild UP-TO-DATE
+> Task :domain:preAndroidMainBuild UP-TO-DATE
+> Task :kotlinYtmusicScraper:preAndroidMainBuild UP-TO-DATE
+> Task :lyricsService:preAndroidMainBuild UP-TO-DATE
+> Task :kizzy:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :ktorExt:preAndroidMainBuild UP-TO-DATE
+> Task :media3-ui:preBuild UP-TO-DATE
+> Task :composeApp:generateReleaseResources UP-TO-DATE
+> Task :kotlinYtmusicScraper:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :lyricsService:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :domain:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :media3-ui:preReleaseBuild UP-TO-DATE
+> Task :mediaserviceinterfaces:preBuild UP-TO-DATE
+> Task :youtubeapi:preBuild UP-TO-DATE
+> Task :media3:preReleaseBuild UP-TO-DATE
+> Task :youtubeapi:preReleaseBuild UP-TO-DATE
+> Task :ktorExt:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :spotify:androidPreBuild UP-TO-DATE
+> Task :crashlytics-empty:packageReleaseResources UP-TO-DATE
+> Task :mediaserviceinterfaces:preReleaseBuild UP-TO-DATE
+> Task :sharedutils:preBuild UP-TO-DATE
+> Task :youtubeapi:generateReleaseResValues UP-TO-DATE
+> Task :spotify:preAndroidMainBuild UP-TO-DATE
+> Task :sharedutils:preReleaseBuild UP-TO-DATE
+> Task :media3-ui:generateReleaseResValues UP-TO-DATE
+> Task :composeApp:convertXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :media3:generateReleaseResValues UP-TO-DATE
+> Task :mediaserviceinterfaces:generateReleaseResValues UP-TO-DATE
+> Task :common:compileAndroidMain UP-TO-DATE
+> Task :composeApp:copyNonXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :composeApp:copyNonXmlValueResourcesForAndroidRelease NO-SOURCE
+> Task :spotify:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :mediaserviceinterfaces:generateReleaseResources UP-TO-DATE
+> Task :composeApp:convertXmlValueResourcesForAndroidRelease NO-SOURCE
+> Task :youtubeapi:generateReleaseResources UP-TO-DATE
+> Task :composeApp:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :media3-ui:generateReleaseResources UP-TO-DATE
+> Task :media3:generateReleaseResources UP-TO-DATE
+> Task :composeApp:prepareComposeResourcesTaskForAndroidRelease NO-SOURCE
+> Task :media3:packageReleaseResources UP-TO-DATE
+> Task :common:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :composeApp:prepareComposeResourcesTaskForAndroidMain NO-SOURCE
+> Task :sharedutils:generateReleaseResValues UP-TO-DATE
+> Task :media3-ui:packageReleaseResources UP-TO-DATE
+> Task :crashlytics-empty:processReleaseNavigationResources UP-TO-DATE
+> Task :mediaserviceinterfaces:processReleaseNavigationResources UP-TO-DATE
+> Task :sharedutils:generateReleaseResources UP-TO-DATE
+> Task :media3-ui:processReleaseNavigationResources UP-TO-DATE
+> Task :youtubeapi:processReleaseNavigationResources UP-TO-DATE
+> Task :youtubeapi:packageReleaseResources UP-TO-DATE
+> Task :mediaserviceinterfaces:packageReleaseResources UP-TO-DATE
+> Task :media3:processReleaseNavigationResources UP-TO-DATE
+> Task :composeApp:generateResourceAccessorsForAndroidMain NO-SOURCE
+> Task :youtubeapi:parseReleaseLocalResources UP-TO-DATE
+> Task :sharedutils:packageReleaseResources UP-TO-DATE
+> Task :composeApp:generateBuildKonfig UP-TO-DATE
+> Task :sharedutils:processReleaseNavigationResources UP-TO-DATE
+> Task :media3-ui:parseReleaseLocalResources UP-TO-DATE
+> Task :crashlytics-empty:parseReleaseLocalResources UP-TO-DATE
+> Task :media3:parseReleaseLocalResources UP-TO-DATE
+> Task :composeApp:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :youtubeapi:generateReleaseRFile UP-TO-DATE
+> Task :mediaserviceinterfaces:parseReleaseLocalResources UP-TO-DATE
+> Task :composeApp:generateComposeResClass UP-TO-DATE
+> Task :composeApp:generateReleaseBuildConfig UP-TO-DATE
+> Task :composeApp:copyNonXmlValueResourcesForCommonMain UP-TO-DATE
+> Task :common:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :media3-ui:generateReleaseRFile UP-TO-DATE
+> Task :crashlytics-empty:generateReleaseRFile UP-TO-DATE
+> Task :sharedutils:parseReleaseLocalResources UP-TO-DATE
+> Task :mediaserviceinterfaces:generateReleaseRFile UP-TO-DATE
+> Task :crashlytics-empty:writeReleaseAarMetadata UP-TO-DATE
+> Task :aiService:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :composeApp:generateResourceAccessorsForAndroidRelease NO-SOURCE
+> Task :data:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :domain:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :kizzy:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :sharedutils:generateReleaseRFile UP-TO-DATE
+> Task :kotlinYtmusicScraper:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :composeApp:convertXmlValueResourcesForCommonMain UP-TO-DATE
+> Task :media3-ui:writeReleaseAarMetadata UP-TO-DATE
+> Task :ktorExt:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :media3:writeReleaseAarMetadata UP-TO-DATE
+> Task :lyricsService:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :spotify:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :mediaserviceinterfaces:writeReleaseAarMetadata UP-TO-DATE
+> Task :youtubeapi:writeReleaseAarMetadata UP-TO-DATE
+> Task :sharedutils:writeReleaseAarMetadata UP-TO-DATE
+> Task :composeApp:processReleaseNavigationResources UP-TO-DATE
+> Task :media3:generateReleaseRFile UP-TO-DATE
+> Task :composeApp:prepareComposeResourcesTaskForCommonMain UP-TO-DATE
+> Task :composeApp:compileReleaseNavigationResources UP-TO-DATE
+> Task :aiService:processAndroidMainManifest UP-TO-DATE
+> Task :composeApp:createReleaseCompatibleScreenManifests UP-TO-DATE
+> Task :common:processAndroidMainManifest UP-TO-DATE
+> Task :composeApp:generateResourceAccessorsForCommonMain UP-TO-DATE
+> Task :crashlytics-empty:extractDeepLinksRelease UP-TO-DATE
+> Task :composeApp:copyReleaseComposeResourcesToAndroidAssets UP-TO-DATE
+> Task :crashlytics-empty:processReleaseManifest UP-TO-DATE
+> Task :composeApp:extractDeepLinksRelease UP-TO-DATE
+> Task :data:processAndroidMainManifest UP-TO-DATE
+> Task :composeApp:mapReleaseSourceSetPaths UP-TO-DATE
+> Task :domain:processAndroidMainManifest UP-TO-DATE
+> Task :kizzy:processAndroidMainManifest UP-TO-DATE
+> Task :kotlinYtmusicScraper:processAndroidMainManifest UP-TO-DATE
+> Task :composeApp:generateActualResourceCollectorsForAndroidMain UP-TO-DATE
+> Task :composeApp:mergeReleaseResources UP-TO-DATE
+> Task :media3:extractDeepLinksRelease UP-TO-DATE
+> Task :lyricsService:processAndroidMainManifest UP-TO-DATE
+> Task :mediaserviceinterfaces:extractDeepLinksRelease UP-TO-DATE
+> Task :ktorExt:processAndroidMainManifest UP-TO-DATE
+> Task :sharedutils:extractDeepLinksRelease UP-TO-DATE
+> Task :composeApp:packageReleaseResources UP-TO-DATE
+> Task :media3-ui:processReleaseManifest UP-TO-DATE
+> Task :media3:processReleaseManifest UP-TO-DATE
+> Task :media3-ui:extractDeepLinksRelease UP-TO-DATE
+> Task :sharedutils:processReleaseManifest UP-TO-DATE
+> Task :youtubeapi:extractDeepLinksRelease UP-TO-DATE
+> Task :mediaserviceinterfaces:processReleaseManifest UP-TO-DATE
+> Task :composeApp:parseReleaseLocalResources UP-TO-DATE
+> Task :crashlytics-empty:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :spotify:processAndroidMainManifest UP-TO-DATE
+> Task :youtubeapi:processReleaseManifest UP-TO-DATE
+> Task :domain:kspAndroidMain SKIPPED
+> Task :domain:kmpPartiallyResolvedDependenciesChecker
+> Task :aiService:kmpPartiallyResolvedDependenciesChecker
+> Task :data:kmpPartiallyResolvedDependenciesChecker
+> Task :sharedutils:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :kizzy:kmpPartiallyResolvedDependenciesChecker
+> Task :crashlytics-empty:javaPreCompileRelease UP-TO-DATE
+> Task :kotlinYtmusicScraper:kmpPartiallyResolvedDependenciesChecker
+> Task :ktorExt:kmpPartiallyResolvedDependenciesChecker
+> Task :domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :kizzy:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :aiService:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :ktorExt:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :sharedutils:javaPreCompileRelease UP-TO-DATE
+> Task :kotlinYtmusicScraper:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :media3:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :mediaserviceinterfaces:javaPreCompileRelease UP-TO-DATE
+> Task :lyricsService:kmpPartiallyResolvedDependenciesChecker
+> Task :media3:javaPreCompileRelease UP-TO-DATE
+> Task :lyricsService:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :youtubeapi:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :spotify:kmpPartiallyResolvedDependenciesChecker
+> Task :media3-ui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :spotify:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :youtubeapi:javaPreCompileRelease UP-TO-DATE
+> Task :domain:compileAndroidMain UP-TO-DATE
+> Task :media3-ui:javaPreCompileRelease UP-TO-DATE
+> Task :composeApp:checkReleaseAarMetadata UP-TO-DATE
+> Task :domain:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :ktorExt:compileAndroidMain UP-TO-DATE
+> Task :ktorExt:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :aiService:compileAndroidMain UP-TO-DATE
+> Task :crashlytics-empty:compileReleaseKotlin UP-TO-DATE
+> Task :aiService:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :crashlytics-empty:compileReleaseJavaWithJavac NO-SOURCE
+> Task :sharedutils:compileReleaseKotlin UP-TO-DATE
+> Task :crashlytics-empty:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :spotify:compileAndroidMain UP-TO-DATE
+> Task :composeApp:dataBindingGenBaseClassesRelease UP-TO-DATE
+> Task :kizzy:compileAndroidMain UP-TO-DATE
+> Task :spotify:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :sharedutils:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :kizzy:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :sharedutils:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :lyricsService:compileAndroidMain UP-TO-DATE
+> Task :media3:compileReleaseKotlin UP-TO-DATE
+> Task :lyricsService:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :composeApp:processReleaseMainManifest UP-TO-DATE
+> Task :media3:compileReleaseJavaWithJavac NO-SOURCE
+> Task :mediaserviceinterfaces:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :media3:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :composeApp:releaseSentryGenerateIntegrationListTask UP-TO-DATE
+> Task :media3-ui:compileReleaseKotlin UP-TO-DATE
+> Task :mediaserviceinterfaces:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :composeApp:processReleaseManifest UP-TO-DATE
+> Task :composeApp:processReleaseManifestForPackage UP-TO-DATE
+> Task :media3-ui:compileReleaseJavaWithJavac NO-SOURCE
+> Task :media3-ui:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :composeApp:processReleaseResources UP-TO-DATE
+> Task :youtubeapi:compileReleaseKotlin UP-TO-DATE
+> Task :youtubeapi:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :youtubeapi:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :kotlinYtmusicScraper:compileAndroidMain UP-TO-DATE
+> Task :kotlinYtmusicScraper:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :data:kspAndroidMain UP-TO-DATE
+> Task :data:copyRoomSchemas NO-SOURCE
+> Task :data:compileAndroidMain UP-TO-DATE
+> Task :data:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+
+> Task :composeApp:compileReleaseKotlinAndroid FAILED
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/SimpMusicApplication.kt:40:33 Unresolved reference 'BuildKonfig'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/SimpMusicApplication.kt:63:28 Unresolved reference 'R'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/service/test/notification/NotificationHandler.kt:22:30 Unresolved reference 'R'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/service/test/notification/NotificationHandler.kt:72:51 Unresolved reference 'R'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/service/test/notification/NotificationHandler.kt:79:31 Unresolved reference 'R'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/service/test/notification/NotificationHandler.kt:80:18 Unresolved reference 'setContentTitle'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/ui/widget/MainAppWidget.kt:66:30 Unresolved reference 'R'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/ui/widget/MainAppWidget.kt:171:42 Unresolved reference 'R'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/ui/widget/MainAppWidget.kt:172:36 Unresolved reference 'R'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/ui/widget/MainAppWidget.kt:174:30 Unresolved reference 'build'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/ui/widget/MainAppWidget.kt:273:67 Unresolved reference 'R'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/ui/widget/MainAppWidget.kt:286:67 Unresolved reference 'R'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/ui/widget/MainAppWidget.kt:302:59 Unresolved reference 'R'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/ui/widget/MainAppWidget.kt:304:59 Unresolved reference 'R'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/ui/widget/MainAppWidget.kt:318:67 Unresolved reference 'R'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/ui/widget/MainAppWidget.kt:334:79 Unresolved reference 'R'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/ui/widget/MainAppWidget.kt:335:78 Unresolved reference 'R'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/ui/widget/MainAppWidget.kt:336:78 Unresolved reference 'R'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/androidMain/kotlin/com/maxrave/simpmusic/ui/widget/MainAppWidget.kt:359:58 Unresolved reference 'R'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/utils/VersionManager.kt:3:30 Unresolved reference 'BuildKonfig'.
+e: file:///home/gamerx/SimpMusic/composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/utils/VersionManager.kt:12:21 Unresolved reference 'BuildKonfig'.
+
+[Incubating] Problems report is available at: file:///home/gamerx/SimpMusic/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':composeApp:compileReleaseKotlinAndroid'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 29s
+159 actionable tasks: 11 executed, 148 up-to-date
+Configuration cache entry stored.

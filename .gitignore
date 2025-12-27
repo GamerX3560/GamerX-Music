@@ -1,0 +1,52 @@
+# Gradle
+.gradle
+build/
+*/build/
+
+# Android
+*.apk
+*.aar
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+local.properties
+proguard-project.txt
+project.properties
+Captures/
+.externalNativeBuild
+.cxx
+cmake-build-debug/
+cmake-build-release/
+.navigation/
+
+# Kotlin
+*.kotlin_module
+*.kotlin_metadata
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Sentry
+sentry.properties
+
+# Secrets
+signing.properties
+*.keystore
+!debug.keystore
+google-services.json
+
+# BuildKonfig
+**/BuildKonfig.kt
