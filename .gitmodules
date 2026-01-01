@@ -3,5 +3,5 @@
 	url = https://github.com/maxrave-dev/MediaServiceCore
 
 [submodule "core"]
-    path = core
-    url = https://github.com/maxrave-dev/core
+	path = core
+	url = https://github.com/maxrave-dev/core
