@@ -1,0 +1,116 @@
+type: logcat
+osVersion: Redmi/veux_global/veux:13/TKQ1.221114.001/V816.0.12.0.TKCMIXM:user/release-keys
+package: com.gamerx.music.dev:43, targetSdk 36
+buffers: main,system,crash,events,kernel
+level: verbose
+
+--------- beginning of crash
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: FATAL EXCEPTION: main
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: Process: com.gamerx.music.dev, PID: 18822
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: java.lang.RuntimeException: Unable to instantiate application com.gamerx.music.SimpMusicApplication package com.gamerx.music.dev: java.lang.ClassNotFoundException: Didn't find class "com.gamerx.music.SimpMusicApplication" on path: DexPathList[[zip file "/data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/base.apk"],nativeLibraryDirectories=[/data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/lib/arm64, /data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at android.app.LoadedApk.makeApplicationInner(LoadedApk.java:1488)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at android.app.LoadedApk.makeApplicationInner(LoadedApk.java:1413)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:7842)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2579)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:110)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:248)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:338)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:9118)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:598)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:932)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: Caused by: java.lang.ClassNotFoundException: Didn't find class "com.gamerx.music.SimpMusicApplication" on path: DexPathList[[zip file "/data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/base.apk"],nativeLibraryDirectories=[/data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/lib/arm64, /data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:637)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:573)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at android.app.AppComponentFactory.instantiateApplication(AppComponentFactory.java:76)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at androidx.core.app.CoreComponentFactory.instantiateApplication(CoreComponentFactory.java:51)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at android.app.Instrumentation.newApplication(Instrumentation.java:1359)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	at android.app.LoadedApk.makeApplicationInner(LoadedApk.java:1481)
+12-24 07:05:14.029 18822 18822 E AndroidRuntime: 	... 11 more
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: FATAL EXCEPTION: main
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: Process: com.gamerx.music.dev, PID: 18848
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: java.lang.RuntimeException: Unable to instantiate application com.gamerx.music.SimpMusicApplication package com.gamerx.music.dev: java.lang.ClassNotFoundException: Didn't find class "com.gamerx.music.SimpMusicApplication" on path: DexPathList[[zip file "/data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/base.apk"],nativeLibraryDirectories=[/data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/lib/arm64, /data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at android.app.LoadedApk.makeApplicationInner(LoadedApk.java:1488)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at android.app.LoadedApk.makeApplicationInner(LoadedApk.java:1413)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:7842)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2579)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:110)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:248)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:338)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:9118)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:598)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:932)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: Caused by: java.lang.ClassNotFoundException: Didn't find class "com.gamerx.music.SimpMusicApplication" on path: DexPathList[[zip file "/data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/base.apk"],nativeLibraryDirectories=[/data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/lib/arm64, /data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:637)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:573)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at android.app.AppComponentFactory.instantiateApplication(AppComponentFactory.java:76)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at androidx.core.app.CoreComponentFactory.instantiateApplication(CoreComponentFactory.java:51)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at android.app.Instrumentation.newApplication(Instrumentation.java:1359)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	at android.app.LoadedApk.makeApplicationInner(LoadedApk.java:1481)
+12-24 07:05:17.332 18848 18848 E AndroidRuntime: 	... 11 more
+--------- beginning of main
+12-24 07:11:33.601 19955 19955 I libc    : SetHeapTaggingLevel: tag level set to 0
+12-24 07:11:33.609 19955 19955 I amerx.music.dev: Late-enabling -Xcheck:jni
+12-24 07:11:33.631 19955 19955 I amerx.music.dev: Using CollectorTypeCMC GC.
+--------- switch to crash
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: FATAL EXCEPTION: main
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: Process: com.gamerx.music.dev, PID: 19955
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: java.lang.RuntimeException: Unable to instantiate application com.gamerx.music.SimpMusicApplication package com.gamerx.music.dev: java.lang.ClassNotFoundException: Didn't find class "com.gamerx.music.SimpMusicApplication" on path: DexPathList[[zip file "/data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/base.apk"],nativeLibraryDirectories=[/data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/lib/arm64, /data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at android.app.LoadedApk.makeApplicationInner(LoadedApk.java:1488)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at android.app.LoadedApk.makeApplicationInner(LoadedApk.java:1413)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:7842)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2579)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:110)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:248)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:338)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:9118)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:598)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:932)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: Caused by: java.lang.ClassNotFoundException: Didn't find class "com.gamerx.music.SimpMusicApplication" on path: DexPathList[[zip file "/data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/base.apk"],nativeLibraryDirectories=[/data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/lib/arm64, /data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:637)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:573)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at android.app.AppComponentFactory.instantiateApplication(AppComponentFactory.java:76)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at androidx.core.app.CoreComponentFactory.instantiateApplication(CoreComponentFactory.java:51)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at android.app.Instrumentation.newApplication(Instrumentation.java:1359)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	at android.app.LoadedApk.makeApplicationInner(LoadedApk.java:1481)
+12-24 07:11:34.774 19955 19955 E AndroidRuntime: 	... 11 more
+--------- switch to main
+12-24 07:11:34.778 19955 19955 I Process : Sending signal. PID: 19955 SIG: 9
+12-24 07:11:35.666 19975 19975 I libc    : SetHeapTaggingLevel: tag level set to 0
+12-24 07:11:35.673 19975 19975 I amerx.music.dev: Late-enabling -Xcheck:jni
+12-24 07:11:35.694 19975 19975 I amerx.music.dev: Using CollectorTypeCMC GC.
+--------- switch to crash
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: FATAL EXCEPTION: main
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: Process: com.gamerx.music.dev, PID: 19975
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: java.lang.RuntimeException: Unable to instantiate application com.gamerx.music.SimpMusicApplication package com.gamerx.music.dev: java.lang.ClassNotFoundException: Didn't find class "com.gamerx.music.SimpMusicApplication" on path: DexPathList[[zip file "/data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/base.apk"],nativeLibraryDirectories=[/data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/lib/arm64, /data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at android.app.LoadedApk.makeApplicationInner(LoadedApk.java:1488)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at android.app.LoadedApk.makeApplicationInner(LoadedApk.java:1413)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:7842)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2579)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:110)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:248)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:338)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:9118)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:598)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:932)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: Caused by: java.lang.ClassNotFoundException: Didn't find class "com.gamerx.music.SimpMusicApplication" on path: DexPathList[[zip file "/data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/base.apk"],nativeLibraryDirectories=[/data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/lib/arm64, /data/app/~~W21BmHXC8riUogepgzx3-Q==/com.gamerx.music.dev-iu1JfOtHZsKTaL0K-xRVDg==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:637)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:573)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at android.app.AppComponentFactory.instantiateApplication(AppComponentFactory.java:76)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at androidx.core.app.CoreComponentFactory.instantiateApplication(CoreComponentFactory.java:51)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at android.app.Instrumentation.newApplication(Instrumentation.java:1359)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	at android.app.LoadedApk.makeApplicationInner(LoadedApk.java:1481)
+12-24 07:11:36.839 19975 19975 E AndroidRuntime: 	... 11 more
+--------- switch to main
+12-24 07:11:37.838 19975 19975 I Process : Sending signal. PID: 19975 SIG: 9
