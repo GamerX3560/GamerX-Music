@@ -1,0 +1,226 @@
+@file:Suppress("DEPRECATION")
+
+package com.gamerx.gamerx_music.ui.screens.settings
+
+import android.annotation.SuppressLint
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.os.Build
+import android.provider.Settings
+import android.widget.Toast
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsetsSides
+import androidx.compose.foundation.layout.only
+import androidx.compose.foundation.layout.windowInsetsPadding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.Text
+import androidx.compose.material3.CenterAlignedTopAppBar
+import androidx.compose.material3.TopAppBarScrollBehavior
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+import androidx.navigation.NavController
+import com.gamerx.gamerx_music.LocalPlayerAwareWindowInsets
+import com.gamerx.gamerx_music.R
+import com.gamerx.gamerx_music.constants.ContentCountryKey
+import com.gamerx.gamerx_music.constants.ContentLanguageKey
+import com.gamerx.gamerx_music.constants.CountryCodeToName
+import com.gamerx.gamerx_music.constants.HideExplicitKey
+import com.gamerx.gamerx_music.constants.LanguageCodeToName
+import com.gamerx.gamerx_music.constants.ProxyEnabledKey
+import com.gamerx.gamerx_music.constants.ProxyTypeKey
+import com.gamerx.gamerx_music.constants.ProxyUrlKey
+import com.gamerx.gamerx_music.constants.SYSTEM_DEFAULT
+import com.gamerx.gamerx_music.constants.SelectedLanguageKey
+import com.gamerx.gamerx_music.ui.component.EditTextPreference
+import com.gamerx.gamerx_music.ui.component.IconButton
+import com.gamerx.gamerx_music.ui.component.ListPreference
+import com.gamerx.gamerx_music.ui.component.PreferenceEntry
+import com.gamerx.gamerx_music.ui.component.PreferenceGroupTitle
+import com.gamerx.gamerx_music.ui.component.SwitchPreference
+import com.gamerx.gamerx_music.ui.utils.backToMain
+import com.gamerx.gamerx_music.utils.rememberEnumPreference
+import com.gamerx.gamerx_music.utils.rememberPreference
+import java.net.Proxy
+import androidx.core.net.toUri
+import com.gamerx.gamerx_music.utils.saveLanguagePreference
+import com.gamerx.gamerx_music.utils.updateLanguage
+
+@SuppressLint("PrivateResource")
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun ContentSettings(
+    navController: NavController,
+    scrollBehavior: TopAppBarScrollBehavior,
+) {
+    val context = LocalContext.current
+    val (contentLanguage, onContentLanguageChange) = rememberPreference(key = ContentLanguageKey, defaultValue = "system")
+    val (contentCountry, onContentCountryChange) = rememberPreference(key = ContentCountryKey, defaultValue = "system")
+    val (selectedLanguage, onSelectedLanguage) = rememberPreference(key = SelectedLanguageKey, defaultValue = "system")
+    val (hideExplicit, onHideExplicitChange) = rememberPreference(key = HideExplicitKey, defaultValue = false)
+
+    val (proxyEnabled, onProxyEnabledChange) = rememberPreference(key = ProxyEnabledKey, defaultValue = false)
+    val (proxyType, onProxyTypeChange) = rememberEnumPreference(key = ProxyTypeKey, defaultValue = Proxy.Type.HTTP)
+    val (proxyUrl, onProxyUrlChange) = rememberPreference(key = ProxyUrlKey, defaultValue = "host:port")
+
+    Column(
+        Modifier
+            .windowInsetsPadding(LocalPlayerAwareWindowInsets.current.only(WindowInsetsSides.Horizontal + WindowInsetsSides.Bottom))
+            .verticalScroll(rememberScrollState())
+    ) {
+        Spacer(
+            Modifier.windowInsetsPadding(
+                LocalPlayerAwareWindowInsets.current.only(
+                    WindowInsetsSides.Top
+                )
+            )
+        )
+
+        PreferenceGroupTitle(
+            title = stringResource(R.string.home)
+        )
+
+        ListPreference(
+            title = { Text(stringResource(R.string.content_language)) },
+            icon = { Icon(painterResource(R.drawable.language), null) },
+            selectedValue = contentLanguage,
+            values = listOf(SYSTEM_DEFAULT) + LanguageCodeToName.keys.toList(),
+            valueText = {
+                LanguageCodeToName.getOrElse(it) {
+                    stringResource(R.string.system_default)
+                }
+            },
+            onValueSelected = onContentLanguageChange
+        )
+        ListPreference(
+            title = { Text(stringResource(R.string.content_country)) },
+            icon = { Icon(painterResource(R.drawable.location_on), null) },
+            selectedValue = contentCountry,
+            values = listOf(SYSTEM_DEFAULT) + CountryCodeToName.keys.toList(),
+            valueText = {
+                CountryCodeToName.getOrElse(it) {
+                    stringResource(R.string.system_default)
+                }
+            },
+            onValueSelected = onContentCountryChange
+        )
+
+        PreferenceEntry(
+            title = { Text(stringResource(R.string.open_supported_links)) },
+            description = stringResource(R.string.configure_supported_links),
+            icon = { Icon(painterResource(R.drawable.add_link), null) },
+            onClick = {
+                try {
+                    context.startActivity(
+                        Intent(
+                            Settings.ACTION_APP_OPEN_BY_DEFAULT_SETTINGS,
+                            "package:${context.packageName}".toUri()
+                        ),
+                    )
+                } catch (_: ActivityNotFoundException) {
+                    Toast.makeText(
+                        context,
+                        R.string.intent_supported_links_not_found,
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            },
+            isEnabled = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
+        )
+
+        PreferenceGroupTitle(title = stringResource(R.string.content))
+        SwitchPreference(
+            title = { Text(stringResource(R.string.hide_explicit)) },
+            icon = { Icon(painterResource(R.drawable.explicit), null) },
+            checked = hideExplicit,
+            onCheckedChange = onHideExplicitChange
+        )
+
+        PreferenceGroupTitle(title = stringResource(R.string.notifications))
+        PreferenceEntry(
+            title = { Text(stringResource(R.string.notifications_settings)) },
+            icon = { Icon(painterResource(R.drawable.notification_on), null) },
+            onClick = { navController.navigate("settings/content/notification") }
+        )
+
+        PreferenceGroupTitle(title = stringResource(R.string.app_language))
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            PreferenceEntry(
+                title = { Text(stringResource(R.string.app_language)) },
+                icon = { Icon(painterResource(R.drawable.translate), null) },
+                onClick = {
+                    context.startActivity(
+                        Intent(
+                            Settings.ACTION_APP_LOCALE_SETTINGS,
+                            "package:${context.packageName}".toUri()
+                        )
+                    )
+                }
+            )
+        } else {
+            ListPreference(
+                title = { Text(stringResource(R.string.app_language)) },
+                icon = { Icon(painterResource(R.drawable.translate), null) },
+                selectedValue = selectedLanguage,
+                values = listOf(SYSTEM_DEFAULT) + LanguageCodeToName.keys.toList(),
+                valueText = { LanguageCodeToName[it] ?: stringResource(R.string.system_default) },
+                onValueSelected = {
+                    onSelectedLanguage(it)
+                    updateLanguage(context, it)
+                    saveLanguagePreference(context, it)
+                }
+            )
+        }
+
+        PreferenceGroupTitle(
+            title = stringResource(R.string.proxy)
+        )
+
+        SwitchPreference(
+            title = { Text(stringResource(R.string.enable_proxy)) },
+            icon = { Icon(painterResource(R.drawable.wifi_proxy), null) },
+            checked = proxyEnabled,
+            onCheckedChange = onProxyEnabledChange
+        )
+
+        AnimatedVisibility(proxyEnabled) {
+            Column {
+                ListPreference(
+                    title = { Text(stringResource(R.string.proxy_type)) },
+                    selectedValue = proxyType,
+                    values = listOf(Proxy.Type.HTTP, Proxy.Type.SOCKS),
+                    valueText = { it.name },
+                    onValueSelected = onProxyTypeChange
+                )
+                EditTextPreference(
+                    title = { Text(stringResource(R.string.proxy_url)) },
+                    value = proxyUrl,
+                    onValueChange = onProxyUrlChange
+                )
+            }
+        }
+    }
+
+    CenterAlignedTopAppBar(
+        title = { Text(stringResource(R.string.content)) },
+        navigationIcon = {
+            IconButton(
+                onClick = navController::navigateUp,
+                onLongClick = navController::backToMain
+            ) {
+                Icon(
+                    painterResource(R.drawable.arrow_back),
+                    contentDescription = null
+                )
+            }
+        },
+        scrollBehavior = scrollBehavior
+    )
+}

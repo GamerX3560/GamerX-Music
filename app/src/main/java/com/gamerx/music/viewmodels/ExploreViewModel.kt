@@ -1,0 +1,81 @@
+package com.gamerx.gamerx_music.viewmodels
+
+import android.content.Context
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.gamerx.innertube.YouTube
+import com.gamerx.innertube.models.filterExplicit
+import com.gamerx.innertube.pages.ExplorePage
+import com.gamerx.gamerx_music.constants.HideExplicitKey
+import com.gamerx.gamerx_music.db.MusicDatabase
+import com.gamerx.gamerx_music.db.entities.Artist
+import com.gamerx.gamerx_music.utils.get
+import com.gamerx.gamerx_music.utils.reportException
+import com.gamerx.gamerx_music.utils.dataStore
+import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
+@HiltViewModel
+class ExploreViewModel @Inject constructor(
+    @ApplicationContext val context: Context,
+    val database: MusicDatabase,
+) : ViewModel() {
+    private val _isRefreshing = MutableStateFlow(false)
+    val isRefreshing = _isRefreshing.asStateFlow()
+    private val _error = MutableStateFlow<String?>(null)
+    val error = _error.asStateFlow()
+    val explorePage = MutableStateFlow<ExplorePage?>(null)
+
+    private suspend fun load() {
+        YouTube.explore().onSuccess { page ->
+                val artists: Set<String>
+                val favouriteArtists: Set<String>
+                database.artistsByCreateDateAsc().first().let { list ->
+                    artists = list.map(Artist::id).toHashSet()
+                    favouriteArtists = list
+                        .filter { it.artist.bookmarkedAt != null }
+                        .map { it.id }
+                        .toHashSet()
+                }
+                explorePage.value =
+                    page.copy(
+                        newReleaseAlbums =
+                        page.newReleaseAlbums
+                            .sortedBy { album ->
+                                if (album.artists.orEmpty().any { it.id in favouriteArtists }) 0
+                                else if (album.artists.orEmpty().any { it.id in artists }) 1
+                                else 2
+                            }
+                            .filterExplicit(context.dataStore.get(HideExplicitKey, false))
+                    )
+            }.onFailure {
+                reportException(it)
+            }
+    }
+
+    fun refresh() {
+        viewModelScope.launch(Dispatchers.IO) {
+            _isRefreshing.value = true
+            try {
+                load()
+            } catch (e: Exception) {
+                e.printStackTrace()
+                _error.value = "Failed to refresh explore content"
+            } finally {
+                _isRefreshing.value = false
+            }
+        }
+    }
+
+    init {
+        viewModelScope.launch(Dispatchers.IO) {
+            load()
+        }
+    }
+}

@@ -1,0 +1,92 @@
+package com.gamerx.gamerx_music.viewmodels
+
+import android.content.Context
+import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.gamerx.gamerx_music.constants.PlaylistSongSortDescendingKey
+import com.gamerx.gamerx_music.constants.PlaylistSongSortType
+import com.gamerx.gamerx_music.constants.PlaylistSongSortTypeKey
+import com.gamerx.gamerx_music.db.MusicDatabase
+import com.gamerx.gamerx_music.extensions.reversed
+import com.gamerx.gamerx_music.extensions.toEnum
+import com.gamerx.gamerx_music.utils.SyncUtils
+import com.gamerx.gamerx_music.utils.dataStore
+import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
+@HiltViewModel
+class LocalPlaylistViewModel @Inject constructor(
+    @ApplicationContext private val context: Context,
+    database: MusicDatabase,
+    savedStateHandle: SavedStateHandle,
+    private val syncUtils: SyncUtils,
+) : ViewModel() {
+    val playlistId = savedStateHandle.get<String>("playlistId")!!
+    val playlist = database.playlist(playlistId)
+        .stateIn(viewModelScope, SharingStarted.Lazily, null)
+    private val _error = MutableStateFlow<String?>(null)
+    val error = _error.asStateFlow()
+    private val _isRefreshing = MutableStateFlow(false)
+    val isRefreshing = _isRefreshing.asStateFlow()
+    val playlistSongs = combine(
+        database.playlistSongs(playlistId),
+        context.dataStore.data
+            .map {
+                it[PlaylistSongSortTypeKey].toEnum(PlaylistSongSortType.CUSTOM) to (it[PlaylistSongSortDescendingKey] ?: true)
+            }
+            .distinctUntilChanged()
+    ) { songs, (sortType, sortDescending) ->
+        when (sortType) {
+            PlaylistSongSortType.CUSTOM -> songs
+            PlaylistSongSortType.CREATE_DATE -> songs.sortedBy { sortDescending }
+            PlaylistSongSortType.NAME -> songs.sortedBy { it.song.song.title.lowercase() }
+            PlaylistSongSortType.ARTIST -> songs.sortedBy { song ->
+                song.song.artists.joinToString { it.name }.lowercase()
+            }
+
+            PlaylistSongSortType.PLAY_TIME -> songs.sortedBy { it.song.song.totalPlayTime }
+        }.reversed(!sortDescending && sortType != PlaylistSongSortType.CUSTOM)
+    }.stateIn(viewModelScope, SharingStarted.Lazily, emptyList())
+
+    fun refresh() {
+        viewModelScope.launch {
+            try {
+                _isRefreshing.value = true
+                val currentPlaylist = playlist.value?.playlist
+                currentPlaylist?.browseId?.let { browseId ->
+                    syncUtils.syncPlaylist(browseId, playlistId)
+                }
+
+            } catch (e: Exception) {
+                e.printStackTrace()
+                _error.value = "Failed to refresh playlist"
+            } finally {
+                _isRefreshing.value = false
+            }
+        }
+    }
+
+    init {
+        viewModelScope.launch {
+            val sortedSongs = playlistSongs.first().sortedWith(compareBy({ it.map.position }, { it.map.id }))
+            database.transaction {
+                sortedSongs.forEachIndexed { index, song ->
+                    if (song.map.position != index) {
+                        update(song.map.copy(position = index))
+                    }
+                }
+            }
+        }
+    }
+}
