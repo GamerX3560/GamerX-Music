@@ -199,7 +199,6 @@ fun SetupWizard(
                             Image(
                                 painter = painterResource(R.mipmap.ic_launcher),
                                 contentDescription = null,
-                                colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onBackground, BlendMode.SrcIn),
                                 modifier = Modifier
                                     .matchParentSize()
                                     .clickable { }

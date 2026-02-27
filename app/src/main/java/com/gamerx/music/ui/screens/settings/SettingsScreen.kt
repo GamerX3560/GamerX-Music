@@ -94,11 +94,7 @@ fun SettingsScreen(
                 .background(MaterialTheme.colorScheme.surfaceColorAtElevation(NavigationBarDefaults.Elevation))
         ) {
             Image(
-                painterResource(R.drawable.gamerx_music_monochrome),
-                colorFilter = ColorFilter.tint(
-                    MaterialTheme.colorScheme.onBackground,
-                    BlendMode.SrcIn
-                ),
+                painterResource(R.mipmap.ic_launcher),
                 contentDescription = null
             )
             Box(

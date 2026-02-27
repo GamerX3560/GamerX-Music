@@ -9,7 +9,8 @@
 [![GitHub release](https://img.shields.io/github/v/release/GamerX3560/GamerX-Music)](https://github.com/GamerX3560/GamerX-Music/releases)
 [![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://www.android.com)
-[![Kotlin](https://img.shields.io/badge/Kotlin-2.2.21-purple.svg)](https://kotlinlang.org)
+[![Kotlin](https://img.shields.io/badge/Kotlin-1.9-purple.svg)](https://kotlinlang.org)
+[![Version](https://img.shields.io/badge/Version-2.2.4-orange.svg)](https://github.com/GamerX3560/GamerX-Music/releases)
 
 [Features](#-features) • [Screenshots](#-screenshots) • [Download](#-download) • [FAQ](#-faq) • [License](#-license)
 
@@ -95,12 +96,7 @@
 ### APK Variants
 
 **Recommended for most users:**
-- `GamerX-Music-universal.apk` - Works on all Android devices
-
-**Smaller downloads (architecture-specific):**
-- `GamerX-Music-arm64-v8a.apk` - For modern 64-bit devices (most phones)
-- `GamerX-Music-armeabi-v7a.apk` - For older 32-bit devices
-- `GamerX-Music-x86_64.apk` - For emulators and x86 devices
+- `GamerX-Music-V2-Release.apk` - Works on all modern Android devices
 
 ### System Requirements
 - **Android**: 8.0 (Oreo) or higher
@@ -244,10 +240,9 @@ This project wouldn't be possible without:
 
 ## 📞 Support & Contact
 
-- **Developer**: Mangesh Choudhary
+- **Developer**: Mangesh Choudhary (GamerX)
 - **GitHub**: [@GamerX3560](https://github.com/GamerX3560)
 - **Issues**: [Report bugs or request features](https://github.com/GamerX3560/GamerX-Music/issues)
-- **Discussions**: [Join the community](https://github.com/GamerX3560/GamerX-Music/discussions)
 
 ---
 
