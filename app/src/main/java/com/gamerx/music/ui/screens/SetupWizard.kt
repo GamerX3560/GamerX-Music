@@ -197,8 +197,9 @@ fun SetupWizard(
                                 .background(MaterialTheme.colorScheme.surfaceColorAtElevation(NavigationBarDefaults.Elevation))
                         ) {
                             Image(
-                                painter = painterResource(R.mipmap.ic_launcher),
+                                painter = painterResource(R.drawable.monochrome),
                                 contentDescription = null,
+                                colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onBackground, BlendMode.SrcIn),
                                 modifier = Modifier
                                     .matchParentSize()
                                     .clickable { }
