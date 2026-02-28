@@ -2,17 +2,20 @@
 
 <div align="center">
 
-![GamerX Music Logo](.github/assets/logo.png)
+<img src=".github/assets/logo.png" width="200" height="200" alt="GamerX Music Logo" style="border-radius: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
 
-**A beautiful, feature-rich YouTube Music client for Android**
+**Welcome to the Next Generation of Android Audio.**
 
 [![GitHub release](https://img.shields.io/github/v/release/GamerX3560/GamerX-Music)](https://github.com/GamerX3560/GamerX-Music/releases)
 [![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://www.android.com)
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9-purple.svg)](https://kotlinlang.org)
 [![Version](https://img.shields.io/badge/Version-2.2.4-orange.svg)](https://github.com/GamerX3560/GamerX-Music/releases)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fgamerx-music.web.app&label=Official%20Site)](https://gamerx-music.web.app)
 
 [Features](#-features) • [Screenshots](#-screenshots) • [Download](#-download) • [FAQ](#-faq) • [License](#-license)
+
+**GamerX Music V2.2.4** is a completely independent, ad-free, high-fidelity YouTube Music wrapper specifically engineered to extract maximum performance out of Android. Built entirely on Java 21 logic and optimized UI architectures, this client offers zero interruptions, off-grid local caching, synced LRCLib lyrics, and an adaptive glassmorphic Material You interface that reacts to what you are listening to.
 
 </div>
 
