@@ -80,9 +80,9 @@
 
 <div align="center">
 
-| Home Screen | Now Playing | Lyrics | Library |
-|------------|-------------|--------|---------|
-| ![Home](.github/screenshots/home.png) | ![Player](.github/screenshots/player.png) | ![Lyrics](.github/screenshots/lyrics.png) | ![Library](.github/screenshots/library.png) |
+| Explore | Library | Appearance | Settings | Account |
+|---------|---------|------------|----------|---------|
+| ![Explore](.github/screenshots/explore.jpg) | ![Library](.github/screenshots/library.jpg) | ![Appearance](.github/screenshots/appearance.jpg) | ![Settings](.github/screenshots/settings.jpg) | ![Account](.github/screenshots/account.jpg) |
 
 *Beautiful Material Design 3 interface with smooth animations*
 
@@ -227,7 +227,6 @@ This project wouldn't be possible without:
 
 - **YouTube Music** - For providing an amazing music streaming service
 - **Google** - For Material Design and Android development tools
-- **JetBrains** - For Kotlin and development tools
 - **Open Source Community** - For the incredible libraries and frameworks
 
 ### Key Libraries Used
